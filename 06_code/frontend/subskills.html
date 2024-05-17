@@ -1,0 +1,118 @@
+<!-- SUBSKILLS PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DASS Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="nav-center">
+      <!-- links -->
+      <ul class="links">
+        <li>
+          <a href="index.html">COURSES &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="modules.html">MODULES &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="subskills.html">SUBSKILLS &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="skilltopics.html">SKILL TOPICS &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="link.html">LINK&nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="test.html">TEST&nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="progress.html">PROGRESS&nbsp;&nbsp;</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h2>SUBSKILLS</h2>
+  <section class="outer_crud_content">
+    <section class="crud_content">
+      <!-- CREATE -->
+      <h3>Create</h3>
+      <form id="subskillForm">
+        <div>
+          <label for="subskill_name">SubSkill Name:</label>
+          <input type="text" id="subskill_name" name="subskill_name" required />
+        </div>
+        <button type="submit" onclick="submitForm_add_subskill(event)">
+          Add SubSkill
+        </button>
+      </form>
+
+      <!-- READ -->
+      <h3>Display</h3>
+      <form id="subskillFormRead">
+        <button type="submit" onclick="submitForm_read_subskills(event)">
+          Read all SubSkills
+        </button>
+      </form>
+      <div class="tables_injected_using_js" id="read_output"></div>
+
+      <!-- UPDATE -->
+      <h3>Update</h3>
+      <form id="subskillFormupd">
+        <div>
+          <label for="subskill_name_upd_old"> Old Subskill: </label>
+          <select id="subskill_name_upd_old" name="subskill_name_upd_old" onfocus="populateOldSubskillName_forUpdate()">
+            <option value="">Select a subskill</option>
+          </select>
+        </div>
+        <div>
+          <label for="subskill">New SubSkill Name:</label>
+          <input type="text" id="subskill_name_upd_new" name="subskill_name_upd_new" required />
+        </div>
+        <button type="submit" onclick="submitForm_update_subskill(event)">
+          Update module
+        </button>
+      </form>
+
+      <!-- DELETE -->
+      <h3>Delete</h3>
+      <form id="subskillFormdel">
+        <label for="subskill_name_del"> Select a subskill </label>
+        <select id="subskill_name_del" name="subskill_name_del" onfocus="populateOldSubskillName_forDelete()">
+          <option value="">Select a subskill</option>
+        </select>
+        <button type="submit" onclick="submitForm_delete_subskill(event)">
+          Delete SubSkill
+        </button>
+      </form>
+      <!-- SUBSKILL-SKILLTOPIC-LINK
+      <h3>Add a skilltopic to a subskill</h3>
+      <form id="module_Forsubskill_link">
+        <div>
+          <label for="subskill_name_st_link"> Subskill </label>
+          <select id="subskill_name_st_link" name="subskill_name_st_link" onfocus="populateOldSubskillName3()">
+            <option value="">Select a subskill</option>
+          </select>
+        </div>
+        <div>
+          <label for="st_name_subskill_link"> SkillTopic </label>
+          <select id="st_name_subskill_link" name="st_name_subskill_link" onfocus="populateOldSkilltopicName2()">
+            <option value="">Select a skilltopic</option>
+          </select>
+        </div>
+        <button type="submit" onclick="submitForm_ASSTL(event)">
+          Link SkillTopic to SubSkill
+        </button>
+      </form> -->
+    </section>
+  </section>
+  <script src="./subskills.js"></script>
+</body>
+
+</html>

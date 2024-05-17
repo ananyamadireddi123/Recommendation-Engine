@@ -1,0 +1,58 @@
+<!-- COURSES PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DASS Project</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-center">
+            <!-- links -->
+            <ul class="links">
+                <li>
+                    <a href="index.html">COURSES &nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="modules.html">MODULES &nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="subskills.html">SUBSKILLS &nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="skilltopics.html">SKILL TOPICS &nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="link.html">LINK&nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="test.html">TEST&nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="progress.html">PROGRESS&nbsp;&nbsp;</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2>TEST</h2>
+            <form id="Templateform">
+                <div>
+                    <h3>Enter template ID = 2</h3>
+                    <label for="exam_template_id">Exam_Template_ID:</label>
+                    <input type="text" id="exam_template_id" name="exam_template_id" required />
+                </div>
+                <button type="submit" onclick="getExamTemplate(event)">
+                    Get Online Assessment
+                </button>
+            </form>
+            <div id="exam_container"></div>
+        
+    
+    <script src="test.js"></script>
+</body>
+
+</html>

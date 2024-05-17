@@ -1,0 +1,150 @@
+<!-- COURSES PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DASS Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="nav-center">
+      <!-- links -->
+      <ul class="links">
+        <li>
+          <a href="index.html">COURSES &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="modules.html">MODULES &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="subskills.html">SUBSKILLS &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="skilltopics.html">SKILL TOPICS &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="link.html">LINK&nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="test.html">TEST&nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="progress.html">PROGRESS&nbsp;&nbsp;</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h2>LINKING PAGE</h2>
+  <section class="outer_crud_content">
+    <section class="crud_content">
+
+      <!-- COURSE-MODULE-LINK -->
+      <section>
+        <h3>Handle modules in a course</h3>
+        <form class="linkpage_forms" id="course_Formod_link">
+          <!-- select course from drop down list -->
+          <div>
+            <label for="course_name_link">Course:</label>
+            <select id="course_name_link" name="course_name_link" onfocus="populateOldCourseName2()">
+              <option value="">Select a course</option>
+            </select>
+          </div>
+          <button type="submit" onclick="viewModulesInCourse(event)">View Modules </button>
+          <!-- view modules already present in the course -->
+          <div class="tables_injected_using_js" id="table_of_modules_in_course"></div>
+          <!-- select module from drop down list -->
+          <div>
+            <label for="module_name_cou_link"> Module: </label>
+            <select id="module_name_cou_link" name="module_name_cou_link" onfocus="populateOldModuleName2()">
+              <option value="">Select a module</option>
+            </select>
+          </div>
+          <!-- set module number -->
+          <div>
+            <label for="module_number_for_course_module_link"> Module Number: </label>
+            <input type="number" id="module_number_for_course_module_link" name="module_number_for_course_module_link"
+              class="integer_input">
+            </select>
+          </div>
+          <div><button type="submit" onclick="submitForm_ACML(event)">Add Module to Course</button></div>
+          <div><button type="submit" onclick="submitForm_ACML_remove(event)">Remove Module from Course</button></div>
+        </form>
+      </section>
+
+      <!-- MODULE-SUBSKILL-LINK -->
+      <section>
+        <h3>Handle subskills in a module</h3>
+        <form class="linkpage_forms" id="module_Forss_link">
+          <!-- select module from drop down list -->
+          <div>
+            <label for="module_name_ss_link"> Module </label>
+            <select id="module_name_ss_link" name="module_name_ss_link" onfocus="populateOldModuleName3()">
+              <option value="">Select a module</option>
+            </select>
+          </div>
+          <button type="submit" onclick="viewSubskillsInModule(event)">View Subskills </button>
+          <!-- view subskills already present in the module -->
+          <div class="tables_injected_using_js" id="table_of_subskills_in_module"></div>
+          <!-- select subskill from drop down list -->
+          <div>
+            <label for="ss_name_module_link"> Subskill </label>
+            <select id="ss_name_module_link" name="ss_name_module_link" onfocus="populateOldSubskillName2()">
+              <option value="">Select a module</option>
+            </select>
+          </div>
+          <!-- set subskill number -->
+          <div>
+            <label for="subskill_number_for_module_subskill_link"> Subskill Number: </label>
+            <input type="number" id="subskill_number_for_module_subskill_link"
+              name="subskill_number_for_module_subskill_link" class="integer_input">
+            </select>
+          </div>
+          <div><button type="submit" onclick="submitForm_AMSL(event)">Add SubSkill to Module</button></div>
+          <div><button type="submit" onclick="submitForm_AMSL_remove(event)">Remove Subskill from Module</button></div>
+        </form>
+      </section>
+
+
+      <!-- SUBSKILL-SKILLTOPIC-LINK -->
+      <section>
+        <h3>Handle skilltopics in a subskill</h3>
+        <form class="linkpage_forms" id="skilltopic_Forsubskill_link">
+          <!-- select subskill from drop down list -->
+          <div>
+            <label for="subskill_name_st_link"> Subskill </label>
+            <select id="subskill_name_st_link" name="subskill_name_st_link" onfocus="populateOldSubskillName3()">
+              <option value="">Select a subskill</option>
+            </select>
+          </div>
+          <button type="submit" onclick="viewSkilltopicsInSubskill(event)">View Skilltopics </button>
+          <!-- view skilltopics already present in the subskill -->
+          <div class="tables_injected_using_js" id="table_of_skilltopics_in_subskills"></div>
+          <!-- select skilltopic from drop down list -->
+          <div>
+            <label for="st_name_subskill_link"> Skilltopic </label>
+            <select id="st_name_subskill_link" name="st_name_subskill_link" onfocus="populateOldSkilltopicName2()">
+              <option value="">Select a Skilltopic</option>
+            </select>
+          </div>
+          <!-- set skilltopic number -->
+          <div>
+            <label for="skilltopic_number_for_subskill_skilltopic_link"> Skilltopic Number: </label>
+            <input type="number" id="skilltopic_number_for_subskill_skilltopic_link"
+              name="skilltopic_number_for_subskill_skilltopic_link" class="integer_input">
+            </select>
+          </div>
+          <div><button type="submit" onclick="submitForm_ASSTL(event)">Add Skilltopic to Subskill</button></div>
+          <div><button type="submit" onclick="submitForm_ASSTL_remove(event)">Remove Skilltopic from Subskill</button>
+          </div>
+        </form>
+      </section>
+    </section>
+  </section>
+  <script src="./link.js"></script>
+</body>
+
+</html>

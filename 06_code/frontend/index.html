@@ -1,0 +1,103 @@
+<!-- COURSES PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DASS Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="nav-center">
+      <!-- links -->
+      <ul class="links">
+        <li>
+          <a href="index.html">COURSES &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="modules.html">MODULES &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="subskills.html">SUBSKILLS &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="skilltopics.html">SKILL TOPICS &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="link.html">LINK&nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="test.html">TEST&nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="progress.html">PROGRESS&nbsp;&nbsp;</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h2>COURSES</h2>
+  <section class="outer_crud_content">
+    <section class="crud_content">
+      <!-- CREATE -->
+      <h3>Create</h3>
+      <form id="courseForm">
+        <div>
+          <label for="course_name">Course Name:</label>
+          <input type="text" id="course_name" name="course_name" required />
+        </div>
+        <!--call to a JS function in immediate backend (courses_routes.js)-->
+        <button type="submit" onclick="submitForm_add_course(event)">
+          Add Course
+        </button>
+      </form>
+
+      <!-- READ -->
+      <h3>Display</h3>
+      <form id="courseFormRead">
+        <button type="submit" onclick="submitForm_read_courses(event)">
+          Read all Courses
+        </button>
+      </form>
+      <div class="tables_injected_using_js" id="read_output"></div>
+
+      <!-- UPDATE -->
+      <h3>Update</h3>
+      <form id="courseFormupd">
+        <div>
+          <label for="course_name_upd_old">Course to be updated:</label>
+          <select id="course_name_upd_old" name="course_name_upd_old" onfocus="populateOldCourseName_forUpdate()">
+            <option value="">Select a course</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="course_name">New Course Name:</label>
+          <input type="text" id="course_name_upd_new" name="course_name_upd_new" required />
+        </div>
+        <button type="submit" onclick="submitForm_update_course(event)">
+          Update Course
+        </button>
+      </form>
+
+      <!-- DELETE -->
+      <h3>Delete</h3>
+      <form id="courseFormdel">
+        <div>
+          <label for="course_name_del">Course to be deleted:</label>
+          <select id="course_name_del" name="course_name_del" onfocus="populateOldCourseName_forDelete()">
+            <option value="">Select a course</option>
+          </select>
+          <button type="submit" onclick="submitForm_delete_course(event)">
+            Delete Course
+          </button>
+        </div>
+      </form>
+    </section>
+  </section>
+  <script src="./index.js"></script>
+</body>
+
+</html>

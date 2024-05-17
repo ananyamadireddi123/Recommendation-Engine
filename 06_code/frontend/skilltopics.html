@@ -1,0 +1,100 @@
+<!-- SKILLTOPICS PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DASS Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="nav-center">
+      <!-- links -->
+      <ul class="links">
+        <li>
+          <a href="index.html">COURSES &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="modules.html">MODULES &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="subskills.html">SUBSKILLS &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="skilltopics.html">SKILL TOPICS &nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="link.html">LINK&nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="test.html">TEST&nbsp;&nbsp;</a>
+        </li>
+        <li>
+          <a href="progress.html">PROGRESS&nbsp;&nbsp;</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h2>SKILLTOPICS</h2>
+  <section class="outer_crud_content">
+    <section class="crud_content">
+      <!-- CREATE -->
+      <h3>Create</h3>
+      <form id="skilltopicForm">
+        <div>
+          <label for="skilltopic_name">SkillTopic Name:</label>
+          <input type="text" id="skilltopic_name" name="skilltopic_name" required />
+        </div>
+        <button type="submit" onclick="submitForm_add_skilltopic(event)">
+          Add SkillTopic
+        </button>
+      </form>
+
+      <!-- READ -->
+      <h3>Display</h3>
+      <form id="skilltopicFormRead">
+        <button type="submit" onclick="submitForm_read_skilltopics(event)">
+          Read all SkillTopics
+        </button>
+      </form>
+      <div class="tables_injected_using_js" id="read_output"></div>
+
+      <!-- UPDATE -->
+      <h3>Update</h3>
+      <form id="skilltopicFormupd">
+        <div>
+          <label for="skilltopic_name_upd_old">SkillTopic to be updated:</label>
+          <select id="skilltopic_name_upd_old" name="skilltopic_name_upd_old"
+            onfocus="populateOldSkilltopicName_forUpdate()">
+            <option value="">Select a skilltopic</option>
+          </select>
+        </div>
+        <div>
+          <label for="subskill">New SkillTopic Name:</label>
+          <input type="text" id="skilltopic_name_upd_new" name="skilltopic_name_upd_new" required />
+        </div>
+        <button type="submit" onclick="submitForm_update_skilltopic(event)">
+          Update SkillTopic
+        </button>
+      </form>
+
+      <!-- DELETE -->
+      <h3>Delete</h3>
+      <form id="skilltopicFormdel">
+        <label for="skilltopic_name_del">SkillTopic to be updated:</label>
+        <select id="skilltopic_name_del" name="skilltopic_name_del" onfocus="populateOldSkilltopicName_forDelete()">
+          <option value="">Select a skilltopic</option>
+        </select>
+        <button type="submit" onclick="submitForm_delete_skilltopic(event)">
+          Delete SkillTopic
+        </button>
+      </form>
+    </section>
+  </section>
+  <script src="./skilltopics.js"></script>
+</body>
+
+</html>

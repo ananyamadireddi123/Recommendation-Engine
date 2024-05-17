@@ -1,0 +1,57 @@
+<!-- COURSES PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DASS Project</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-center">
+            <!-- links -->
+            <ul class="links">
+                <li>
+                    <a href="index.html">COURSES &nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="modules.html">MODULES &nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="subskills.html">SUBSKILLS &nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="skilltopics.html">SKILL TOPICS &nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="link.html">LINK&nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="test.html">TEST&nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a href="progress.html">PROGRESS&nbsp;&nbsp;</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2>USER PROGRESS</h2>
+    <section class="outer_crud_content">
+        <section class="crud_content">
+            <h3>User Progress</h3>
+            <form id="testForm">
+                <button type="submit" onclick="showUserProgress(event)">
+                    Show Progress
+                </button>
+            </form>
+            <div class="progress-box" id="user_progress_output" align="center">
+            </div>
+        </section>
+    </section>
+    <script src="progress.js"></script>
+</body>
+
+</html>
